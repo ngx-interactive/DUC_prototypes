@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <canvas id="unity-canvas" width=1920 height=1080></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -55,12 +55,12 @@
         updateBannerVisibility();
       }
 
-      var buildUrl ="Build"; //"https://media.githubusercontent.com/media/KothariHimali/ngx-interactive/WICA_InteractiveTouchScreenWebGL/main/" + "Build";
-      var loaderUrl = "https://github.com/ngx-interactive/WICA_InteractiveTouchScreenWebGL/blob/18ca733db6351302f9ad45c8f14c4ebd893c806b/Build/WebGL.loader.js"; // buildUrl + "/WebGL.loader.js";
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/Web test.loader.js";
       var config = {
-        dataUrl: "https://github.com/ngx-interactive/WICA_InteractiveTouchScreenWebGL/blob/0ab75f3c31526e1771d0deb72ff4f479bd2dec1d/Build/WebGL.data",//buildUrl + "/WebGL.data",
-        frameworkUrl: "https://github.com/ngx-interactive/WICA_InteractiveTouchScreenWebGL/blob/18ca733db6351302f9ad45c8f14c4ebd893c806b/Build/WebGL.framework.js", //buildUrl + "/WebGL.framework.js",
-        codeUrl: "https://github.com/ngx-interactive/WICA_InteractiveTouchScreenWebGL/blob/18ca733db6351302f9ad45c8f14c4ebd893c806b/Build/WebGL.wasm",//buildUrl + "/WebGL.wasm",
+        dataUrl: buildUrl + "/Web test.data",
+        frameworkUrl: buildUrl + "/Web test.framework.js",
+        codeUrl: buildUrl + "/Web test.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "NGX Interactive",
         productName: "WICA - Interactive Map",
@@ -91,8 +91,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "1920px";
+        canvas.style.height = "1080px";
       }
 
       loadingBar.style.display = "block";
